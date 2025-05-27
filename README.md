@@ -1,8 +1,8 @@
 ComputationalModelingMetalAlex
 ==============================
 [//]: # (Badges)
-[![GitHub Actions Build Status](https://github.com/REPLACE_WITH_OWNER_ACCOUNT/ComputationalModelingMetalAlex/workflows/CI/badge.svg)](https://github.com/REPLACE_WITH_OWNER_ACCOUNT/ComputationalModelingMetalAlex/actions?query=workflow%3ACI)
-[![codecov](https://codecov.io/gh/REPLACE_WITH_OWNER_ACCOUNT/ComputationalModelingMetalAlex/branch/main/graph/badge.svg)](https://codecov.io/gh/REPLACE_WITH_OWNER_ACCOUNT/ComputationalModelingMetalAlex/branch/main)
+[![GitHub Actions Build Status](https://github.com/AlexHaskel/ComputationalModelingMetalAlex/workflows/CI/badge.svg)](https://github.com/AlexHaskel/ComputationalModelingMetalAlex/actions?query=workflow%3ACI)
+[![codecov](https://codecov.io/gh/AlexHaskel/ComputationalModelingMetalAlex/branch/main/graph/badge.svg)](https://codecov.io/gh/AlexHaskel/ComputationalModelingMetalAlex/branch/main)
 
 
 SIMCODES Research project
