@@ -1,7 +1,7 @@
 CompMetalsAlex
 ==============================
 [//]: # (Badges)
-[![GitHub Actions Build Status](https://github.com/AlexHaskel/CompMetalsAlex/workflows/CI/badge.svg)](https://github.com/AlexHaskel/CompMetalsAlex/actions?query=workflow%3ACI)
+[![CI](https://github.com/SIMCODES-ISU/CompMetalsAlex/actions/workflows/CI.yaml/badge.svg)](https://github.com/SIMCODES-ISU/CompMetalsAlex/actions/workflows/CI.yaml)
 [![codecov](https://codecov.io/gh/AlexHaskel/CompMetalsAlex/branch/main/graph/badge.svg)](https://codecov.io/gh/AlexHaskel/CompMetalsAlex/branch/main)
 
 
