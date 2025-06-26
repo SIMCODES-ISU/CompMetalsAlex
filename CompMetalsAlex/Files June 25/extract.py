@@ -1,13 +1,12 @@
 import os
 from datetime import datetime
-from decimal import *
 
-directory = "/mnt/c/C++_TESTS/games_work/files june 25"   
+directory = "/mnt/c/C++_TESTS/simcodes_/compMetalsAlex/compmetalsalex/files june 25"   
 output_file = directory + "/data/extractedhartree.csv"
 
 def extract_fields_hartree():
    with open(output_file, 'w') as out_file:
-      out_file.write(",Undamped Coulomb\n")
+      out_file.write("Title,Undamped Coulomb\n")
       for file_name in os.listdir(directory):
          if os.path.isfile(os.path.join(directory, file_name)):
             with open(file_name, 'r') as in_file:
@@ -49,7 +48,7 @@ output_file2 = directory + "/data/extractedkcal.csv"
 
 def extract_fields_kcal():
    with open(output_file2, 'w') as out_file:
-      out_file.write(",Undamped Coulomb\n")
+      out_file.write("Title,Undamped Coulomb\n")
       for file_name in os.listdir(directory):
          if os.path.isfile(os.path.join(directory, file_name)):
             with open(file_name, 'r') as in_file:
