@@ -7,9 +7,9 @@ import sys
 
 import pytest
 
-import ComputationalModelingMetalAlex
+import CompMetalsAlex
 
 
-def test_ComputationalModelingMetalAlex_imported():
+def test_CompMetalsAlex_imported():
     """Sample test, will always pass so long as import statement worked."""
-    assert "ComputationalModelingMetalAlex" in sys.modules
+    assert "CompMetalsAlex" in sys.modules
