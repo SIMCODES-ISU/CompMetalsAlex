@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to ComputationalModelingMetalAlex's documentation!
+Welcome to CompMetalsAlex's documentation!
 =========================================================
 
 .. grid:: 1 1 2 2
@@ -11,7 +11,7 @@ Welcome to ComputationalModelingMetalAlex's documentation!
     .. grid-item-card:: Getting Started
       :margin: 0 3 0 0
       
-      Learn the basics of using ComputationalModelingMetalAlex.
+      Learn the basics of using CompMetalsAlex.
 
       .. button-link:: ./getting_started.html
          :color: primary
@@ -39,7 +39,7 @@ Welcome to ComputationalModelingMetalAlex's documentation!
     .. grid-item-card:: API Reference
       :margin: 0 3 0 0
       
-      How to use the API of ComputationalModelingMetalAlex.
+      How to use the API of CompMetalsAlex.
 
       .. button-link:: ./api.html
          :color: primary
