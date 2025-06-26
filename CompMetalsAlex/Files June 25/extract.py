@@ -6,7 +6,10 @@ output_file = directory + "/data/extractedhartree.csv"
 
 def extract_fields_hartree():
    with open(output_file, 'w') as out_file:
-      out_file.write("Title,Undamped Coulomb\n")
+      out_file.write("File,Undamped Coulomb")
+      for i in range(882):
+         out_file.write(",")
+      out_file.write("\n")
       for file_name in os.listdir(directory):
          if os.path.isfile(os.path.join(directory, file_name)):
             with open(file_name, 'r') as in_file:
@@ -48,7 +51,10 @@ output_file2 = directory + "/data/extractedkcal.csv"
 
 def extract_fields_kcal():
    with open(output_file2, 'w') as out_file:
-      out_file.write("Title,Undamped Coulomb\n")
+      out_file.write("File,Undamped Coulomb")
+      for i in range(882):
+         out_file.write(",")
+      out_file.write("\n")
       for file_name in os.listdir(directory):
          if os.path.isfile(os.path.join(directory, file_name)):
             with open(file_name, 'r') as in_file:

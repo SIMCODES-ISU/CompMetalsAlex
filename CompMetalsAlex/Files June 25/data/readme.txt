@@ -11,4 +11,4 @@ Undamped Coulomb/Electrostatic Energy = CHARGE-CHARGE + CHARGE-DIPOLE + CHARGE-Q
 Total Coulomb/Electrostatic Energy = Undamped Coul. E. + Damping function term (aka OVERLAP PENETRATION ENERGY)
 
 
-Data obtained on: 2025-06-26 02:16:32
+Data obtained on: 2025-06-26 03:06:45
