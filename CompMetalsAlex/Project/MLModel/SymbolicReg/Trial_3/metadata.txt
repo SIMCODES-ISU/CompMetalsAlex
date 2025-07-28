@@ -1,0 +1,16 @@
+Random Seed for split replicability: 43
+Run for approx (start5am)
+Allowed expressions and settings:
+
+niterations = n_iter,
+        binary_operators=["+", "*", "-", "/", "pow_int(x, y) = pow(x, abs(round(y)))", "inv_power = 1/(x^y)", "^"],
+        extra_sympy_mappings={"pow_int": lambda x, y: x ** abs(sympy.ceiling(y-0.5)), "inv_power": lambda x,y: 1/(x**y)},
+        unary_operators=["log"],
+        elementwise_loss="loss(x, y) = (x - y)^2",
+        maxsize=30,
+        model_selection="best",
+        verbosity=1,
+        complexity_of_variables=2,
+        constraints={"pow_int": (-1, 1), "/": (-1, 1), "inv_power": (1,4), "^": (1, 4)}, # -1: Arbitrary complexity; 1: Only constants
+
+

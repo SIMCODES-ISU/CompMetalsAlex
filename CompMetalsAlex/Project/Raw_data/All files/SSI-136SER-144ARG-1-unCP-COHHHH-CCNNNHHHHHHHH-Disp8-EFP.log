@@ -1,0 +1,1564 @@
+source /work/simcodes/pxu/gamess-efp/install.info
+setenv GMS_VERSION 00
+setenv GMS_PATH /work/simcodes/pxu/gamess-efp
+setenv GMS_BUILD_DIR /work/simcodes/pxu/gamess-efp
+setenv GMS_TARGET linux64
+setenv GMS_HPC_SYSTEM_TARGET generic
+setenv GMS_ARCH x86_64
+setenv GMS_FORTRAN oneapi-ifort
+setenv GMS_IFORT_VERNO 2022
+setenv GMS_MATHLIB mkl
+setenv GMS_MATHLIB_PATH /shared/hpc/intel/22.3.1/mkl/2022.2.1/lib/intel64
+setenv GMS_MKL_VERNO oneapi
+setenv GMS_THREADED_BLAS false
+setenv GMS_LAPACK_LINK_LINE 
+setenv GMS_DDI_COMM mpi
+setenv GMS_MPI_LIB impi
+setenv GMS_MPI_PATH /shared/hpc/intel/22.3.1/mpi/2021.7.1
+setenv GMS_MSUAUTO false
+setenv GMS_HPCCHEM false
+setenv GMS_HPCCHEM_PATH
+setenv GMS_HPCCHEM_USE_DATA_SERVERS false
+setenv GMS_PHI none
+setenv GMS_SHMTYPE sysv
+setenv GMS_OPENMP false
+setenv GMS_OPENMP_OFFLOAD false
+setenv GMS_USE_HIPFORT false
+setenv USE_CUBLAS false
+setenv USE_HIPBLAS false
+setenv GMS_LIBXC false
+setenv GMS_MDI false
+setenv GMS_VM2 false
+setenv TINKER false
+setenv VB2000 false
+setenv XMVB false
+setenv NEO false
+setenv NBO false
+setenv RISM false
+setenv GMS_FPE_FLAGS -fpe0
+unset echo
+SLURM has assigned the following compute nodes to this run:
+nova18-wide-66
+srun mkdir -p /tmp/6757869
+export TMOUT=5400
+export TMPDIR=/tmp
+export PTMPDIR=/tmp/ptmp
+Input file supplied : SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.inp
+----- GAMESS execution script 'rungms-dev' -----
+This job is running on host nova18-wide-66
+under operating system Linux at Wed Jul 16 01:51:33 PM CDT 2025 with mpi communication mode
+Available scratch disk space (Kbyte units) at beginning of the job is
+Filesystem      1K-blocks     Used  Available Use% Mounted on
+/dev/nvme0n1p1 1562049648 10923948 1551125700   1% /tmp
+GAMESS temporary binary files will be written to /tmp/6757869
+GAMESS supplementary output files will be written to /home/mavery/restart
+limit stacksize 32768
+unset echo
+Copying input file SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.inp to your run's scratch directory...
+cp SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.inp /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F05
+setenv NO_STOP_MESSAGE 1
+setenv AUXDATA /work/simcodes/pxu/gamess-efp/auxdata
+setenv EXTBAS /dev/null
+setenv NUCBAS /work/simcodes/mavery/EFP_databases2025/SSI/EFP-EFP/iscrelec_1_iscrpol_1_iscrdisp_1/2025/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.nucbas
+setenv EXTCAB /work/simcodes/pxu/gamess-efp/auxdata/AUXBAS/auxdef21
+setenv POSBAS /work/simcodes/mavery/EFP_databases2025/SSI/EFP-EFP/iscrelec_1_iscrpol_1_iscrdisp_1/2025/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.posbas
+setenv DFTBPAR /work/simcodes/pxu/gamess-efp/auxdata/DFTB
+setenv ERICFMT /work/simcodes/pxu/gamess-efp/auxdata/ericfmt.dat
+setenv MCPPATH /work/simcodes/pxu/gamess-efp/auxdata/MCP
+setenv BASPATH /work/simcodes/pxu/gamess-efp/auxdata/BASES
+setenv QUANPOL /work/simcodes/pxu/gamess-efp/auxdata/QUANPOL
+setenv MAKEFP /home/mavery/restart/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.efp
+setenv GAMMA /home/mavery/restart/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.gamma
+setenv TRAJECT /home/mavery/restart/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.trj
+setenv RESTART /home/mavery/restart/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.rst
+setenv QMWAVE /home/mavery/restart/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.qmw
+setenv MDDIP /home/mavery/restart/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.dip
+setenv OPTHES1 /home/mavery/restart/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.hs1
+setenv OPTHES2 /home/mavery/restart/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.hs2
+setenv FCIDUMP /home/mavery/restart/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.FCIDUMP
+setenv XYZ /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.xyz
+setenv IRCDATA /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F04
+setenv INPUT /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F05
+setenv PUNCH /home/mavery/restart/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.dat
+setenv NAMDRST /home/mavery/restart/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.namdrst
+setenv AOINTS /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F08
+setenv MOINTS /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F09
+setenv DICTNRY /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F10
+setenv DRTFILE /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F11
+setenv CIVECTR /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F12
+setenv CASINTS /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F13
+setenv CIINTS /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F14
+setenv WORK15 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F15
+setenv WORK16 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F16
+setenv CSFSAVE /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F17
+setenv FOCKDER /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F18
+setenv WORK19 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F19
+setenv DASORT /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F20
+setenv DIABDAT /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F21
+setenv DFTINTS /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F21
+setenv DFTGRID /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F22
+setenv JKFILE /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F23
+setenv ORDINT /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F24
+setenv EFPIND /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F25
+setenv PCMDATA /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F26
+setenv PCMINTS /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F27
+setenv SVPWRK1 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F26
+setenv SVPWRK2 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F27
+setenv COSCAV /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F26
+setenv COSDATA /home/mavery/restart/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.cosmo
+setenv COSPOT /home/mavery/restart/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.pot
+setenv MLTPL /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F28
+setenv MLTPLT /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F29
+setenv DAFL30 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F30
+setenv SOINTX /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F31
+setenv SOINTY /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F32
+setenv SOINTZ /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F33
+setenv SORESC /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F34
+setenv RISM01 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F26R
+setenv RISM02 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F27R
+setenv QOPWRF /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.wrf
+setenv GCILIST /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F37
+setenv HESSIAN /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F38
+setenv QMMMTEI /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F39
+setenv SOCCDAT /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F40
+setenv AABB41 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F41
+setenv BBAA42 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F42
+setenv BBBB43 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F43
+setenv REMD /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F44
+setenv UNV /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F45
+setenv UNPV /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F46
+setenv MCQD50 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F50
+setenv MCQD51 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F51
+setenv MCQD52 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F52
+setenv MCQD53 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F53
+setenv MCQD54 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F54
+setenv MCQD55 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F55
+setenv MCQD56 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F56
+setenv MCQD57 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F57
+setenv MCQD58 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F58
+setenv MCQD59 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F59
+setenv MCQD60 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F60
+setenv MCQD61 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F61
+setenv MCQD62 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F62
+setenv MCQD63 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F63
+setenv MCQD64 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F64
+setenv NMRINT1 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F61
+setenv NMRINT2 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F62
+setenv NMRINT3 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F63
+setenv NMRINT4 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F64
+setenv NMRINT5 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F65
+setenv NMRINT6 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F66
+setenv DCPHFH2 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F67
+setenv DCPHF21 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F68
+setenv ELNUINT /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F67
+setenv NUNUINT /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F68
+setenv GVVPT /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F69
+setenv NUMOIN /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F69
+setenv NUMOCAS /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F70
+setenv NUELMO /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F71
+setenv NUELCAS /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F72
+setenv EPOVRLP /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F73
+setenv RIVMAT /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F51
+setenv RIT2A /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F52
+setenv RIT3A /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F53
+setenv RIT2B /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F54
+setenv RIT3B /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F55
+setenv KI /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F47
+setenv BI /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F48
+setenv PRMERI /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F49
+setenv TRSERI /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F50
+setenv PVP /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F51
+setenv TPVPI /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F52
+setenv TPVPJ /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F53
+setenv PPVPP /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F54
+setenv TPPVPP /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F55
+setenv DEN2P1 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F70
+setenv DEN2P2 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F71
+setenv DEN2P3 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F72
+setenv DEN2P4 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F73
+setenv DEN2NM /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F74
+setenv DEN2OPT /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F75
+setenv GMCREF /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F70
+setenv GMCO2R /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F71
+setenv GMCROC /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F72
+setenv GMCOOC /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F73
+setenv GMCCC0 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F74
+setenv GMCHMA /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F75
+setenv GMCEI1 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F76
+setenv GMCEI2 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F77
+setenv GMCEOB /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F78
+setenv GMCEDT /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F79
+setenv GMCERF /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F80
+setenv GMCHCR /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F81
+setenv GMCGJK /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F82
+setenv GMCGAI /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F83
+setenv GMCGEO /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F84
+setenv GMCTE1 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F85
+setenv GMCTE2 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F86
+setenv GMCHEF /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F87
+setenv GMCMOL /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F88
+setenv GMCMOS /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F89
+setenv GMCWGT /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F90
+setenv GMCRM2 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F91
+setenv GMCRM1 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F92
+setenv GMCR00 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F93
+setenv GMCRP1 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F94
+setenv GMCRP2 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F95
+setenv GMCVEF /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F96
+setenv GMCDIN /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F97
+setenv GMC2SZ /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F98
+setenv GMCCCS /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F99
+unset echo
+rm: cannot remove '/home/mavery/restart/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.casino': No such file or directory
+rm: cannot remove '/home/mavery/restart/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.dmn': No such file or directory
+rm: cannot remove '/home/mavery/restart/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.cim': No such file or directory
+rm: cannot remove '/home/mavery/restart/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.cosmo': No such file or directory
+rm: cannot remove '/home/mavery/restart/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.pot': No such file or directory
+rm: cannot remove '/home/mavery/restart/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.gamma': No such file or directory
+rm: cannot remove '/home/mavery/restart/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.efp': No such file or directory
+rm: cannot remove '/home/mavery/restart/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.dip': No such file or directory
+rm: cannot remove '/home/mavery/restart/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.hs1': No such file or directory
+rm: cannot remove '/home/mavery/restart/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.hs2': No such file or directory
+rm: cannot remove '/home/mavery/restart/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.dat': No such file or directory
+rm: cannot remove '/home/mavery/restart/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.qmw': No such file or directory
+rm: cannot remove '/home/mavery/restart/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.rst': No such file or directory
+rm: cannot remove '/home/mavery/restart/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.trj': No such file or directory
+-----debug----
+HOSTFILE /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.nodes.mpd contains
+nova18-wide-66
+--------------
+-----debug----
+PROCFILE /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.processes.mpd contains
+nova18-wide-66:2
+--------------
+setenv I_MPI_PIN disable
+unset echo
+setenv I_MPI_SHM_OPT shm
+setenv I_MPI_WAIT_MODE 1
+setenv I_MPI_DEBUG 0
+unset echo
+-----debug----
+the execution path is
+/shared/hpc/intel/22.3.1/mpi/2021.7.1/intel64/bin /shared/hpc/intel/22.3.1/inspector/2022.3.1/bin64 /shared/hpc/intel/22.3.1/itac/2021.7.1/bin /shared/hpc/intel/22.3.1/vtune/2022.4.1/bin64 /shared/hpc/intel/22.3.1/mpi/2021.7.1/libfabric/bin /shared/hpc/intel/22.3.1/mpi/2021.7.1/bin /shared/hpc/intel/22.3.1/debugger/2021.7.1/gdb/intel64/bin /shared/hpc/intel/22.3.1/advisor/2022.3.1/bin64 /shared/hpc/intel/22.3.1/compiler/2022.2.1/linux/bin/intel64 /shared/hpc/intel/22.3.1/compiler/2022.2.1/linux/bin /shared/hpc/intel/22.3.1/compiler/2022.2.1/linux/lib/oclfpga/bin /opt/rit/el9/20230413/app/linux-rhel9-x86_64_v3/gcc-11.2.1/gcc-12.2.0-khmr45wlnkpkbsxvhxuqnxwrtf2silsg/bin /opt/rit/el9/20230413/app/linux-rhel9-x86_64_v3/gcc-11.2.1/zstd-1.5.4-l2uh2sm4hpifpaksftftmire2jh7dlrm/bin /home/mavery/.local/bin /home/mavery/bin /usr/local/bin /usr/bin /usr/local/sbin /usr/sbin /usr/local/cuda/bin
+ 
+the library path is
+/shared/hpc/intel/22.3.1/mpi/2021.7.1/intel64/lib:/shared/hpc/intel/22.3.1/mpi/2021.7.1/intel64/lib/release/:/shared/hpc/intel/22.3.1/itac/2021.7.1/slib:/shared/hpc/intel/22.3.1/tbb/2021.7.1/lib/intel64/gcc4.8:/shared/hpc/intel/22.3.1/mpi/2021.7.1/libfabric/lib:/shared/hpc/intel/22.3.1/mpi/2021.7.1/lib/release:/shared/hpc/intel/22.3.1/mpi/2021.7.1/lib:/shared/hpc/intel/22.3.1/mkl/2022.2.1/lib/intel64:/shared/hpc/intel/22.3.1/dnnl/2022.2.1/cpu_dpcpp_gpu_dpcpp/lib:/shared/hpc/intel/22.3.1/debugger/2021.7.1/gdb/intel64/lib:/shared/hpc/intel/22.3.1/debugger/2021.7.1/libipt/intel64/lib:/shared/hpc/intel/22.3.1/debugger/2021.7.1/dep/lib:/shared/hpc/intel/22.3.1/dal/2021.7.1/lib/intel64:/shared/hpc/intel/22.3.1/ccl/2021.7.1/lib/cpu_gpu_dpcpp:/shared/hpc/intel/22.3.1/compiler/2022.2.1/linux/lib:/shared/hpc/intel/22.3.1/compiler/2022.2.1/linux/lib/x64:/shared/hpc/intel/22.3.1/compiler/2022.2.1/linux/compiler/lib/intel64_lin:/shared/hpc/intel/22.3.1/compiler/2022.2.1/linux/lib/oclfpga/host/linux64/lib:/opt/rit/el9/20230413/app/linux-rhel9-x86_64_v3/gcc-11.2.1/gcc-12.2.0-khmr45wlnkpkbsxvhxuqnxwrtf2silsg/lib64:/opt/rit/el9/20230413/app/linux-rhel9-x86_64_v3/gcc-11.2.1/gcc-12.2.0-khmr45wlnkpkbsxvhxuqnxwrtf2silsg/lib:/opt/rit/el9/20230413/app/linux-rhel9-x86_64_v3/gcc-11.2.1/zstd-1.5.4-l2uh2sm4hpifpaksftftmire2jh7dlrm/lib:/opt/rit/el9/20230413/app/linux-rhel9-x86_64_v3/gcc-11.2.1/zlib-1.2.13-wcef3x64l7gazllg37ybcjrutpe5nzd6/lib:/opt/rit/el9/20230413/app/linux-rhel9-x86_64_v3/gcc-11.2.1/mpc-1.3.1-yfep7v2mq7rkfrq4tpmekpwhro5sxeua/lib:/opt/rit/el9/20230413/app/linux-rhel9-x86_64_v3/gcc-11.2.1/mpfr-4.2.0-av6zkh35lzezzofrzr4vx7ygrydbdyjn/lib:/opt/rit/el9/20230413/app/linux-rhel9-x86_64_v3/gcc-11.2.1/gmp-6.2.1-dh2y7b4ptp2s6r3su6kuvcs6gkxltujy/lib:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/local/cuda/bin:/usr/local/cuda/lib64
+ 
+The dynamically linked libraries for this binary are
+/work/simcodes/pxu/gamess-efp/gamess.00.x :
+
+/work/simcodes/pxu/gamess-efp/gamess.00.x :
+	linux-vdso.so.1 (0x00007ffc3e57f000)
+	libmpifort.so.12 => /shared/hpc/intel/22.3.1/mpi/2021.7.1/lib/libmpifort.so.12 (0x00007f02a3950000)
+	libmpi.so.12 => /shared/hpc/intel/22.3.1/mpi/2021.7.1/lib/release/libmpi.so.12 (0x00007f02a211b000)
+	libmpi_ilp64.so => /shared/hpc/intel/22.3.1/mpi/2021.7.1/lib/release/libmpi_ilp64.so (0x00007f02a1ed5000)
+	libm.so.6 => /lib64/libm.so.6 (0x00007f02a1dee000)
+	libc.so.6 => /lib64/libc.so.6 (0x00007f02a1be5000)
+	libgcc_s.so.1 => /opt/rit/el9/20230413/app/linux-rhel9-x86_64_v3/gcc-11.2.1/gcc-12.2.0-khmr45wlnkpkbsxvhxuqnxwrtf2silsg/lib64/libgcc_s.so.1 (0x00007f02a1bc2000)
+	librt.so.1 => /lib64/librt.so.1 (0x00007f02a1bbd000)
+	libdl.so.2 => /lib64/libdl.so.2 (0x00007f02a1bb8000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007f02a3d08000)
+--------------
+MPI kickoff will run GAMESS on 1 cores in 1 nodes.
+The binary to be executed is /work/simcodes/pxu/gamess-efp/gamess.00.x
+MPI will run 1 compute processes and 1 data servers,
+    placing 1 of each process type onto each node.
+The scratch disk space on each node is /tmp/6757869, with free space
+Filesystem      1K-blocks     Used  Available Use% Mounted on
+/dev/nvme0n1p1 1562049648 10924948 1551124700   1% /tmp
+setenv I_MPI_HYDRA_ENV all
+setenv I_MPI_PERHOST 2
+unset echo
+mpiexec.hydra -f /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.processes.mpd -n 2 /work/simcodes/pxu/gamess-efp/gamess.00.x
+export TMOUT=5400
+export TMPDIR=/tmp
+export PTMPDIR=/tmp/ptmp
+          *******************************************************
+          *                                                     *
+          *      GAMESS VERSION = 15 JUL 2024 (R2 Patch 1)          *
+          *                                                     *
+          *              doi.org/10.1063/5.0005188              *
+          *                                                     *
+          **************** 64 BIT LINUX VERSION *****************
+ 
+           git commit: 9e843eef154b232f58b4cae88ff7acc5f053511f
+ 
+
+  GAMESS HAS BEEN MADE POSSIBLE WITH IMPORTANT CONTRIBUTIONS FROM
+  THE FOLLOWING INDIVIDUALS (IN ALPHABETICAL ORDER):
+
+     IVANA ADAMOVIC, CHRISTINE AIKENS, TOMOKO AKAMA,
+     MELISA ALKAN, YURI ALEXEEV, YURIKO AOKI, POOJA ARORA,
+     TOSHIO ASADA, ANDREY ASADCHEV, KIM K. BALDRIDGE,
+     PRADIPTA BANDYOPADHYAY, TAYLOR A. BARNES, MARIA BARYSZ,
+     ROB BELL, JONATHAN BENTZ, COLLEEN BERTONI,
+     JERRY A. BOATZ, BRETT BODE, KURT BRORSEN, KURT R. BRORSEN,
+     LAIMUTIS BYTAUTAS, CALEB CARLIN, LAURA CARRINGTON,
+     GALINA CHABAN, BENOIT CHAMPAGNE, WEI CHEN, MAHITO CHIBA,
+     DAN CHIPMAN, CHEOL HO CHOI, TANNER CULPITT,
+     DIPAYAN DATTA, PAUL DAY, ALBERT DEFUSCO,
+     NUWAN DESILVA, J. EMILIANO DEUSTUA,
+     TIM DUDLEY, MICHEL DUPUIS, STEVEN T. ELBERT,
+     DMITRI FEDOROV, KATHERINE FERRERAS, MICHAEL FILATOV,
+     ALEX FINDLATER,GRAHAM FLETCHER, MARK FREITAG,
+     CHRISTIAN FRIEDL, DAVID GARMER, 
+     IGOR S. GERASIMOV, KURT GLAESEMANN,
+     MARK S. GORDON, JEFFREY R. GOUR, FENG LONG GU,
+     EMILIE B. GUIDEZ, ANASTASIA GUNINA, SHARON HAMMES-SCHIFFER,
+     MASATAKE HARUTA, KIMIHIKO HIRAO, YASUHIRO IKABATA,
+     TZVETELIN IORDANOV, STEPHAN IRLE, KAZUYA ISHIMURA,
+     JOE IVANIC, FRANK JENSEN, JAN H. JENSEN, VISVALDAS KAIRYS,
+     MUNEAKI KAMIYA, MICHIO KATOUDA, NAOAKI KAWAKAMI, DAN KEMP,
+     BERNARD KIRTMAN, KAZUO KITAURA, MARIUSZ KLOBUKOWSKI,
+     MASATO KOBAYASHI, KONSTANTIN KOMAROV, PRAKASHAN KORAMBATH,
+     JACEK KORCHOWIEC, SHIRO KOSEKI, KAROL KOWALSKI,
+     JIMMY KROMANN, STANISLAW A. KUCHARSKI, HENRY KURTZ,
+     SAROM SOK LEANG, SEUNGHOON LEE, HUI LI, SHUHUA LI, WEI LI,
+     JESSE J. LUTZ, ALEKSANDR O. LYKHIN,
+     ILIAS MAGOULAS, MARCIN MAKOWSKI,
+     JOANI MATO, NIKITA MATSUNAGA, BENEDETTA MENNUCCI,
+     GRANT MERRILL, NORIYUKI MINEZAWA, VLADIMIR MIRONOV,
+     EISAKU MIYOSHI, JOHN A. MONTGOMERY JR., HIROTOSHI MORI,
+     JONATHAN MULLIN, MONIKA MUSIAL, SHIGERU NAGASE,
+     TAKESHI NAGATA, HIROMI NAKAI, TAKAHITO NAKAJIMA,
+     YUYA NAKAJIMA, HARUYUKI NAKANO, HIROYA NAKATA, SEAN NEDD,
+     HEATHER NETZLOFF, KIET A. NGUYEN, YOSHIO NISHIMOTO,
+     BOSILJKA NJEGIC, RYAN OLSON, MIKE PAK, ROBERTO PEVERATI,
+     BUU PHAM, PIOTR PIECUCH, ANNA POMOGAEVA, DAVID POOLE,
+     SPENCER PRUITT, OLIVIER QUINET, LUKE ROSKOP,
+     KLAUS RUEDENBERG, ANDREW SAND, TOSAPORN SATTASATHUCHANA,
+     NOZOMI SAWADA, MICHAEL W. SCHMIDT, PATRICK E. SCHNEIDER,
+     JUNJI SEINO, PRACHI SHARMA, JUN SHEN, JIM SHOEMAKER,
+     GEORGE SCHOENDORFF, YINAN SHU, DEJUN SI, JONATHAN SKONE,
+     LYUDMILA SLIPCHENKO, TONY SMITH, JIE SONG, MARK SPACKMAN,
+     CASPER STEINMANN, WALT STEVENS, PEIFENG SU, SHUJUN SU,
+     CHET SWALINA, CHINAMI TAKASHIMA, TETSUYA TAKETSUGU,
+     ZHEN TAO, NANDUN THELLAMUREGE, ANANTA TIWARI,
+     SEIKEN TOKURA, JACOPO TOMASI,
+     TSUGUKI TOUMA, TAKAO TSUNEDA, HIROAKI UMEDA,
+     JORGE LUIS GALVEZ VALLEJO, YALI WANG, SIMON WEBB,
+     AARON WEST, THERESA L. WINDUS, MARTA WLOCH,
+     PENG XU, KIYOSHI YAGI, SUSUMU YANAGISAWA, YANG YANG,
+     SOOHAENG YOO, TAKESHI YOSHIKAWA, FEDERICO ZAHARIEV,
+     TOBY ZENG
+
+  WHO ARE SUPPORTED BY THEIR INSTITUTION/UNIVERSITY/COMPANY/GROUP
+  (IN ALPHABETICAL ORDER):
+
+     EP ANALYTICS,
+     FACULTES UNIVERSITAIRES NOTRE-DAME DE LA PAIX,
+     INSTITUTE FOR MOLECULAR SCIENCE, IOWA STATE UNIVERSITY,
+     JACKSON STATE UNIVERSITY, JOHANNES KEPLER UNIVERSITY LINZ,
+     KYUNGPOOK NATIONAL UNIVERSITY
+     KYUSHU UNIVERSITY, MICHIGAN STATE UNIVERSITY,
+     MIE UNIVERSITY, THE MOLECULAR SCIENCES SOFTWARE INSTITUTE,
+     MOSCOW STATE UNIVERSITY,
+     N. COPERNICUS UNIVERSITY, NAGOYA UNIVERSITY,
+     NANJING UNIVERSITY, NAT. INST. OF ADVANCED INDUSTRIAL
+     SCIENCE AND TECHNOLOGY, NATIONAL INST. OF STANDARDS AND
+     TECHNOLOGY, NESMEYANOV INSTITUTE OF ORGANOELEMENT COMPOUNDS
+     OF RUSSIAN ACADEMY OF SCIENCES, OSAKA PREFECTURE UNIVERSITY,
+     PENNSYLVANIA STATE UNIVERSITY, TOKYO INSTITUTE OF TECHNOLOGY,
+     UNIVERSITY OF AARHUS, UNIVERSITY OF ALBERTA,
+     UNIVERSITY OF CALIFORNIA AT SANTA BARBARA,
+     UNIVERSITY OF COPENHAGEN, UNIVERSITY OF IOWA,
+     UNIVERSITY OF MEMPHIS, UNIVERSITY OF MINNESOTA,
+     UNIVERSITY OF NEBRASKA, UNIVERSITY OF NEW ENGLAND,
+     UNIVERSITY OF NOTRE DAME, UNIVERSITY OF PISA,
+     UNIVERSITY OF SILESIA, UNIVERSITY OF TOKYO,
+     UNIVERSITY OF ZURICH, WASEDA UNIVERSITY,
+     YALE UNIVERSITY
+
+  GAMESS SOFTWARE MANAGEMENT TEAM FOR THIS RELEASE:
+     MARK S. GORDON (TEAM LEAD),
+     BRETT BODE (SENIOR ADVISOR),
+     GIUSEPPE BARCA,
+     COLLEEN BERTONI,
+     KRISTOPHER KEIPERT (ADVISOR),
+     SAROM S. LEANG (DEVELOPMENT LEAD),
+     BUU PHAM,
+     JACKSON HAYES (WEBSITE ADMINISTRATOR),
+     PENG XU
+
+ EXECUTION OF GAMESS BEGUN 13:51:34 16-JUL-2025    
+
+            ECHO OF THE FIRST FEW INPUT CARDS -
+ INPUT CARD> $contrl runtyp=energy coord=fragonly $end                                      
+ INPUT CARD> $system  mwords=100 $end                                                       
+ INPUT CARD> $efrag                                                                         
+ INPUT CARD>iscrelec=1 iscrpol=1 iscrdisp=1                                                 
+ INPUT CARD>FRAGNAME=monoA                                                                  
+ INPUT CARD>A01C 1.585000874690 0.501530163183 2.655431498621                               
+ INPUT CARD>A02O 2.115000874690 0.619530163183 1.343431498621                               
+ INPUT CARD>A03H 2.896000874690 1.216530163183 1.368431498621                               
+ INPUT CARD>A04H 0.652000874690 -0.058469836817 2.601431498621                              
+ INPUT CARD>A05H 1.366000874690 1.489530163183 3.062431498621                               
+ INPUT CARD>A06H 2.277582874690 -0.040179836817 3.316401498621                              
+ INPUT CARD>FRAGNAME=monoB                                                                  
+ INPUT CARD>A01C -2.470999125310 -0.285469836817 0.228431498621                             
+ INPUT CARD>A02C -0.397999125310 -0.245469836817 -1.121568501379                            
+ INPUT CARD>A03N 0.900000874690 -0.046469836817 -1.185568501379                             
+ INPUT CARD>A04N -1.028999125310 -0.091469836817 0.030431498621                             
+ INPUT CARD>A05N -1.063999125310 -0.591469836817 -2.205568501379                            
+ INPUT CARD>A06H 1.415000874690 0.211530163183 -0.350568501379                              
+ INPUT CARD>A07H 1.383000874690 -0.145469836817 -2.067568501379                             
+ INPUT CARD>A08H -0.491999125310 0.256530163183 0.811431498621                              
+ INPUT CARD>A09H -2.063999125310 -0.694469836817 -2.176568501379                            
+ INPUT CARD>A10H -0.580999125310 -0.663469836817 -3.086568501379                            
+ INPUT CARD>A11H -3.028999125310 -0.430469836817 -0.697568501379                            
+ INPUT CARD>A12H -2.860999125310 0.626530163183 0.685431498621                              
+ INPUT CARD>A13H -2.664930125310 -1.115669836817 0.923531498621                             
+ INPUT CARD>$END                                                                            
+ INPUT CARD>          RUNTYP=MAKEFP EFFECTIVE FRAGMENT POTENTIAL DATA FOLLOWS...            
+ INPUT CARD>          MONOA   EFP GENERATED AT 12:10:02 13-JUN-2025                         
+ INPUT CARD> $MONOA                                                                         
+ INPUT CARD>EFP DATA FOR MONOA    SCFTYP=RHF     ... GENERATED WITH BASIS SET=XXX           
+ INPUT CARD> COORDINATES (BOHR)                                                             
+ INPUT CARD>A01C       2.9952173435   0.9477545830   5.0180379116  12.0000000  6.0          
+ INPUT CARD>A02O       3.9967721170   1.1707422495   2.5387174157  15.9949100  8.0          
+ INPUT CARD>A03H       5.4726481134   2.2989086642   2.5859605654   1.0078250  1.0          
+ INPUT CARD>A04H       1.2321029969  -0.1104919701   4.9159927082   1.0078250  1.0          
+ INPUT CARD>A05H       2.5813673522   2.8148038589   5.7871563886   1.0078250  1.0          
+ INPUT CARD>A06H       4.3040075475  -0.0759288818   6.2670900977   1.0078250  1.0          
+ INPUT CARD>BO21       3.4959947302   1.0592484163   3.7783776636   0.0000000  0.0          
+ INPUT CARD>BO32       4.7347101152   1.7348254569   2.5623389905   0.0000000  0.0          
+ INPUT CARD>BO41       2.1136601702   0.4186313064   4.9670153099   0.0000000  0.0          
+ INPUT CARD>BO51       2.7882923478   1.8812792209   5.4025971501   0.0000000  0.0          
+ INPUT CARD>BO61       3.6496124455   0.4359128506   5.6425640046   0.0000000  0.0          
+ INPUT CARD> STOP                                                                           
+ INPUT CARD> MONOPOLES                                                                      
+ INPUT CARD>A01C      -4.7504530632   6.00000                                               
+ INPUT CARD>A02O      -8.4520570965   8.00000                                               
+ INPUT CARD>A03H      -0.6287630837   1.00000                                               
+ INPUT CARD>A04H      -0.6434207696   1.00000                                               
+ INPUT CARD>A05H      -0.6541259773   1.00000                                               
+ INPUT CARD>A06H      -0.6610104205   1.00000                                               
+    100000000 WORDS OF MEMORY AVAILABLE
+
+     $CONTRL OPTIONS
+     ---------------
+ SCFTYP=RHF          RUNTYP=ENERGY       EXETYP=RUN     
+ MPLEVL=       0     CITYP =NONE         CCTYP =NONE         VBTYP =NONE    
+ DFTTYP=NONE         TDDFT =NONE    
+ MULT  =       1     ICHARG=       0     NZVAR =       0     COORD =FRAGONLY
+ PP    =NONE         RELWFN=NONE         LOCAL =NONE         NUMGRD=       F
+ ISPHER=      -1     NOSYM =       0     MAXIT =      30     UNITS =ANGS    
+ PLTORB=       F     MOLPLT=       F     AIMPAC=       F     FRIEND=        
+ NPRINT=       7     IREST =       0     GEOM  =INPUT   
+ NORMF =       0     NORMP =       0     ITOL  =      20     ICUT  =       9
+ INTTYP=BEST         GRDTYP=BEST         QMTTOL= 1.0E-06
+
+     $SYSTEM OPTIONS
+     ---------------
+  REPLICATED MEMORY=   100000000 WORDS (ON EVERY NODE).
+ DISTRIBUTED MEMDDI=           0 MILLION WORDS IN AGGREGATE,
+ MEMDDI DISTRIBUTED OVER   1 PROCESSORS IS           0 WORDS/PROCESSOR.
+ TOTAL MEMORY REQUESTED ON EACH PROCESSOR=   100000000 WORDS.
+ TIMLIM=      525600.00 MINUTES, OR     365.0 DAYS.
+ PARALL= F  BALTYP=  DLB     KDIAG=    0  COREFL= F
+ MXSEQ2=     300 MXSEQ3=     150  mem10=         0  mem22=         0
+
+ READING $EFRAG GROUP
+ COORD=CART      POSITION=OPTIMIZE  POLMETHD=FRGSCF   NBUFFMO=0
+ FINISHED READING $EFRAG GROUP,   2 FRAGMENTS WILL BE USED.
+
+
+
+     SUMMARY OF THE EFFECTIVE FRAGMENT POTENTIAL MODEL CHOSEN
+     --------------------------------------------------------
+ TOTAL NUMBER OF MULTIPOLE POINTS   =        36  (EFP1/EFP2 ELECTROSTATICS)
+ TOTAL NUMBER OF POLARIZABLE POINTS =        22  (EFP1/EFP2 INDUCTION)
+ TOTAL NUMBER OF L-J POINTS         =         0  (REPULSION AND DISPERSION)
+ TOTAL NUMBER OF AO CENTERS         =        19  (EFP2 PAULI REPULSION)
+ TOTAL NUMBER OF EFP MOS            =        22  (EFP2 PAULI REPULSION)
+ TOTAL NO OF DYNAMIC POLARIZABLE PTS=       264  (EFP2 DISPERSION)
+ TOTAL NUMBER OF EFP MOS            =        47  (EFP2 CHARGE TRANSFER)
+
+ THIS IS A -EFP2- TYPE RUN, INCLUDING SEPARATE FORMULAE FOR
+   PAULI REPULSION=T  DISPERSION=T  CHARGE TRANSFER=T
+
+ NOTE QM/EFP2 EXCHANGE REPULSION HAS TWO TYPES OF TWO-ELECTRON INTEGRALS,
+ (1) ALL 4 CENTERS ON QM REGION, 
+ (2) ONE OR TWO CENTERS ON EFP REGION.
+ OPTION FOR QM/EFP2 EXCHANGE REPULSION TWO-ELECTRON INTEGRAL CODE FOR (2)
+     DIRECT TWO-ELECTRON INTEGRALS CALCULATION IS ON
+
+ OPTIONS FOR EFP SCREENING:
+     ELECTROSTATIC EFP-EFP SCREENING CHOICE IS USING OVERLAP
+     POLARIZATION EFP-EFP SCREENING IS TANG-TOENNIS LIKE
+     DISPERSION EFP-EFP SCREENING CHOICE IS USING OVERLAP
+
+     $EWALD OPTIONS
+     -----------
+
+     IFEWLD   =        F         TINFOIL        =        T
+     BETA    =    0.200         ELECTRIC CONST =     1.00
+     EPSILON =     1.00         CUT_OFF        = 0.10E+04
+     CUTLIST =  1000.00         LEVEL          =    1
+     KMAX    =       10         EWLDPL         =        F
+
+          ----------------
+          PROPERTIES INPUT
+          ----------------
+
+     MOMENTS            FIELD           POTENTIAL          DENSITY
+ IEMOM =       1   IEFLD =       0   IEPOT =       0   IEDEN =       0
+ WHERE =COMASS     WHERE =NUCLEI     WHERE =NUCLEI     WHERE =NUCLEI  
+ OUTPUT=BOTH       OUTPUT=BOTH       OUTPUT=BOTH       OUTPUT=BOTH    
+ IEMINT=       0   IEFINT=       0                     IEDINT=       0
+                                                       MORB  =       0
+          EXTRAPOLATION IN EFFECT
+ ORBITAL PRINTING OPTION: NPREO=     1     0     2     1
+
+     ----------------------
+     TARGET OFFLOAD OPTIONS
+     ----------------------
+     RHF    =       F
+     CPHF    =       F
+     MAKEFP =       F
+
+     -------------------------------
+     INTEGRAL TRANSFORMATION OPTIONS
+     -------------------------------
+     NWORD  =            0
+     CUTTRF = 1.0E-09     MPTRAN =       0
+     DIRTRF =       F     AOINTS =DUP     
+
+          ----------------------
+          INTEGRAL INPUT OPTIONS
+          ----------------------
+ NOPK  =       1 NORDER=       0 SCHWRZ=       F
+
+ ..... DONE SETTING UP THE RUN .....
+ STEP CPU TIME =     0.23 TOTAL CPU TIME =          0.2 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.2 SECONDS, CPU UTILIZATION IS    99.46%
+ I,J=                     1                     1
+ |SIJ| and RIJ   1  1     0.01375040487321    4.94468135579213
+ I,J=                     1                     2
+ |SIJ| and RIJ   1  2     0.00087230651784    7.44481032663865
+ I,J=                     1                     3
+ |SIJ| and RIJ   1  3     0.00014334170558   10.78841466274918
+ I,J=                     1                     4
+ |SIJ| and RIJ   1  4     0.00028926915962   10.12242818428511
+ I,J=                     1                     5
+ |SIJ| and RIJ   1  5     0.00014939504072    8.99713810440759
+ I,J=                     1                     6
+ |SIJ| and RIJ   1  6     0.00617686896093    6.55577148275779
+ I,J=                     1                     7
+ |SIJ| and RIJ   1  7     0.00058345326787    6.66076938713439
+ I,J=                     1                     8
+ |SIJ| and RIJ   1  8     0.00151172934787    6.64098169422164
+ I,J=                     1                     9
+ |SIJ| and RIJ   1  9     0.00003620886456   10.37617254992060
+ I,J=                     1                    10
+ |SIJ| and RIJ   1 10     0.00589555640633    6.25545548812479
+ I,J=                     1                    11
+ |SIJ| and RIJ   1 11     0.00233700031637    8.48256236585836
+ I,J=                     1                    12
+ |SIJ| and RIJ   1 12     0.00036278843214   10.32691878618300
+ I,J=                     1                    13
+ |SIJ| and RIJ   1 13     0.00078103316154   10.95427405029287
+ I,J=                     1                    14
+ |SIJ| and RIJ   1 14     0.00081465427296    9.72856868737184
+ I,J=                     1                    15
+ |SIJ| and RIJ   1 15     0.00064317339996    7.43086802478574
+ I,J=                     2                     1
+ |SIJ| and RIJ   2  1     0.00525905636466    7.19269081253784
+ I,J=                     2                     2
+ |SIJ| and RIJ   2  2     0.00031612157625    8.04880150058828
+ I,J=                     2                     3
+ |SIJ| and RIJ   2  3     0.00023924098279   11.80838329272400
+ I,J=                     2                     4
+ |SIJ| and RIJ   2  4     0.00029621575783    9.23219226308288
+ I,J=                     2                     5
+ |SIJ| and RIJ   2  5     0.00041811282233   10.26604327469963
+ I,J=                     2                     6
+ |SIJ| and RIJ   2  6     0.00018436951965    6.50410958380556
+ I,J=                     2                     7
+ |SIJ| and RIJ   2  7     0.00054442371123    9.10688924055555
+ I,J=                     2                     8
+ |SIJ| and RIJ   2  8     0.00099165352082    8.38149988014146
+ I,J=                     2                     9
+ |SIJ| and RIJ   2  9     0.00009641247499   11.96705692818938
+ I,J=                     2                    10
+ |SIJ| and RIJ   2 10     0.00140783713326    8.27947870440122
+ I,J=                     2                    11
+ |SIJ| and RIJ   2 11     0.00061508742275    8.30944998726268
+ I,J=                     2                    12
+ |SIJ| and RIJ   2 12     0.00044475577774    9.52757393872192
+ I,J=                     2                    13
+ |SIJ| and RIJ   2 13     0.00041144175265   10.66462264479623
+ I,J=                     2                    14
+ |SIJ| and RIJ   2 14     0.00059337004803   11.01754362788384
+ I,J=                     2                    15
+ |SIJ| and RIJ   2 15     0.00266551560675    7.79305843549841
+ I,J=                     3                     1
+ |SIJ| and RIJ   3  1     0.02681767373344    5.12056865295317
+ I,J=                     3                     2
+ |SIJ| and RIJ   3  2     0.00132709786048    6.90266700600339
+ I,J=                     3                     3
+ |SIJ| and RIJ   3  3     0.00076935728025   10.45332775628296
+ I,J=                     3                     4
+ |SIJ| and RIJ   3  4     0.00027330812027    9.16374764688060
+ I,J=                     3                     5
+ |SIJ| and RIJ   3  5     0.00074994737745    8.75993664382996
+ I,J=                     3                     6
+ |SIJ| and RIJ   3  6     0.00185883192373    5.71915403574478
+ I,J=                     3                     7
+ |SIJ| and RIJ   3  7     0.00076352841066    6.99179039631871
+ I,J=                     3                     8
+ |SIJ| and RIJ   3  8     0.00125716952261    6.59448655966185
+ I,J=                     3                     9
+ |SIJ| and RIJ   3  9     0.00055171160272   10.29532703990679
+ I,J=                     3                    10
+ |SIJ| and RIJ   3 10     0.00085317363829    6.28879810891370
+ I,J=                     3                    11
+ |SIJ| and RIJ   3 11     0.00173648272669    7.64442410585372
+ I,J=                     3                    12
+ |SIJ| and RIJ   3 12     0.00020362280134    9.23617197065388
+ I,J=                     3                    13
+ |SIJ| and RIJ   3 13     0.00099951090629   10.12358676880485
+ I,J=                     3                    14
+ |SIJ| and RIJ   3 14     0.00049595735767    9.46263601960783
+ I,J=                     3                    15
+ |SIJ| and RIJ   3 15     0.00041552786798    6.71248287895754
+ I,J=                     4                     1
+ |SIJ| and RIJ   4  1     0.00738623446371    7.41086774654350
+ I,J=                     4                     2
+ |SIJ| and RIJ   4  2     0.00188523391114    8.70086469054227
+ I,J=                     4                     3
+ |SIJ| and RIJ   4  3     0.00037833239272   12.30448083213274
+ I,J=                     4                     4
+ |SIJ| and RIJ   4  4     0.00053024101209   10.28047892918285
+ I,J=                     4                     5
+ |SIJ| and RIJ   4  5     0.00040832445514   10.73959851218876
+ I,J=                     4                     6
+ |SIJ| and RIJ   4  6     0.00816846236650    7.24542885581577
+ I,J=                     4                     7
+ |SIJ| and RIJ   4  7     0.00052555124756    9.26698158097051
+ I,J=                     4                     8
+ |SIJ| and RIJ   4  8     0.00073107800128    8.76284343426302
+ I,J=                     4                     9
+ |SIJ| and RIJ   4  9     0.00046998711872   12.33385223794937
+ I,J=                     4                    10
+ |SIJ| and RIJ   4 10     0.00059186121793    8.43939065248233
+ I,J=                     4                    11
+ |SIJ| and RIJ   4 11     0.00072671794578    9.03494554643162
+ I,J=                     4                    12
+ |SIJ| and RIJ   4 12     0.00083094827395   10.08655653681598
+ I,J=                     4                    13
+ |SIJ| and RIJ   4 13     0.00040195707272   11.42145244795026
+ I,J=                     4                    14
+ |SIJ| and RIJ   4 14     0.00009667806645   11.35825781953296
+ I,J=                     4                    15
+ |SIJ| and RIJ   4 15     0.00090730976737    8.28515530532679
+ I,J=                     5                     1
+ |SIJ| and RIJ   5  1     0.00138505414087    6.30175278649137
+ I,J=                     5                     2
+ |SIJ| and RIJ   5  2     0.00924147495575    6.73930480243162
+ I,J=                     5                     3
+ |SIJ| and RIJ   5  3     0.00051965899364   10.41339533395162
+ I,J=                     5                     4
+ |SIJ| and RIJ   5  4     0.00120638563042    7.99103991840680
+ I,J=                     5                     5
+ |SIJ| and RIJ   5  5     0.00429752958565    8.97432164747114
+ I,J=                     5                     6
+ |SIJ| and RIJ   5  6     0.03650204496622    5.13458542002372
+ I,J=                     5                     7
+ |SIJ| and RIJ   5  7     0.00145433180653    8.18447464612910
+ I,J=                     5                     8
+ |SIJ| and RIJ   5  8     0.00199764508018    7.28543180538779
+ I,J=                     5                     9
+ |SIJ| and RIJ   5  9     0.00146647717064   10.68282052283664
+ I,J=                     5                    10
+ |SIJ| and RIJ   5 10     0.00043874206935    7.14528355442503
+ I,J=                     5                    11
+ |SIJ| and RIJ   5 11     0.00616842635022    6.84713950524515
+ I,J=                     5                    12
+ |SIJ| and RIJ   5 12     0.00141833563242    7.83465097147760
+ I,J=                     5                    13
+ |SIJ| and RIJ   5 13     0.00347852574756    9.18919711416815
+ I,J=                     5                    14
+ |SIJ| and RIJ   5 14     0.00101434397589    9.60078277708492
+ I,J=                     5                    15
+ |SIJ| and RIJ   5 15     0.00875485484723    6.26158086599579
+ I,J=                     6                     1
+ |SIJ| and RIJ   6  1     0.08936074406078    4.00281149506228
+ I,J=                     6                     2
+ |SIJ| and RIJ   6  2     0.00089487583693    6.17943615167931
+ I,J=                     6                     3
+ |SIJ| and RIJ   6  3     0.00372282162624    9.60065891888977
+ I,J=                     6                     4
+ |SIJ| and RIJ   6  4     0.00105755202072    8.85893834018364
+ I,J=                     6                     5
+ |SIJ| and RIJ   6  5     0.00675508294737    7.84071598119386
+ I,J=                     6                     6
+ |SIJ| and RIJ   6  6     0.02317842747226    5.26303025882674
+ I,J=                     6                     7
+ |SIJ| and RIJ   6  7     0.01258541205452    5.84485957143632
+ I,J=                     6                     8
+ |SIJ| and RIJ   6  8     0.00447777508748    5.56398874327307
+ I,J=                     6                     9
+ |SIJ| and RIJ   6  9     0.00082250694811    9.30439978461241
+ I,J=                     6                    10
+ |SIJ| and RIJ   6 10     0.00361291519531    5.25991188739409
+ I,J=                     6                    11
+ |SIJ| and RIJ   6 11     0.00581093184032    7.18849998943699
+ I,J=                     6                    12
+ |SIJ| and RIJ   6 12     0.00060396445241    9.05720901023360
+ I,J=                     6                    13
+ |SIJ| and RIJ   6 13     0.00363298143307    9.66069689568170
+ I,J=                     6                    14
+ |SIJ| and RIJ   6 14     0.00319592302145    8.58126725797702
+ I,J=                     6                    15
+ |SIJ| and RIJ   6 15     0.00004335464314    6.14922512229013
+ I,J=                     7                     1
+ |SIJ| and RIJ   7  1     0.05796430421786    4.23392950413483
+ I,J=                     7                     2
+ |SIJ| and RIJ   7  2     0.00213078299617    6.64419918197125
+ I,J=                     7                     3
+ |SIJ| and RIJ   7  3     0.00246487032306    9.95673238828496
+ I,J=                     7                     4
+ |SIJ| and RIJ   7  4     0.00043013452773    9.43912887160686
+ I,J=                     7                     5
+ |SIJ| and RIJ   7  5     0.00541030218136    8.19645031929509
+ I,J=                     7                     6
+ |SIJ| and RIJ   7  6     0.00308911625426    5.76265223762897
+ I,J=                     7                     7
+ |SIJ| and RIJ   7  7     0.00832950731723    6.00736309302944
+ I,J=                     7                     8
+ |SIJ| and RIJ   7  8     0.01135933197962    5.88900948212951
+ I,J=                     7                     9
+ |SIJ| and RIJ   7  9     0.00141458368426    9.58926447676579
+ I,J=                     7                    10
+ |SIJ| and RIJ   7 10     0.01462551323751    5.44148741573608
+ I,J=                     7                    11
+ |SIJ| and RIJ   7 11     0.00131169198668    7.65663812999285
+ I,J=                     7                    12
+ |SIJ| and RIJ   7 12     0.00054137992962    9.41823574876989
+ I,J=                     7                    13
+ |SIJ| and RIJ   7 13     0.00114936449969   10.12791384420636
+ I,J=                     7                    14
+ |SIJ| and RIJ   7 14     0.00159677785991    8.85950071480685
+ I,J=                     7                    15
+ |SIJ| and RIJ   7 15     0.00138591413152    6.52140385268654
+
+                 INDUCED DIPOLE    ATOMIC UNITS   DEBYE
+                 --------------    ------------   -----
+                     X(IND)          0.42831    1.08867
+                     Y(IND)          0.13167    0.33468
+                     Z(IND)          0.49675    1.26261
+ for I=                     1 and J=                     1
+ overlap F6=  0.996572113044115     
+ overlap F7=  0.996502893038151     
+ overlap F8=  0.996477558235207     
+ undamped E6= -1.717276522708981E-004
+ undamped E7=  2.655070443987635E-005
+ undamped E8= -1.002977423741399E-004
+ for I=                     1 and J=                     2
+ overlap F6=  0.999970343360047     
+ overlap F7=  0.999968758612197     
+ overlap F8=  0.999968015068918     
+ undamped E6= -1.855004201247763E-004
+ undamped E7=  2.733297507324849E-005
+ undamped E8= -1.048496207816649E-004
+ for I=                     1 and J=                     3
+ overlap F6=  0.999998803952001     
+ overlap F7=  0.999998708832625     
+ overlap F8=  0.999998658809308     
+ undamped E6= -1.870469630074814E-004
+ undamped E7=  2.730138043252206E-005
+ undamped E8= -1.050410163956377E-004
+ for I=                     1 and J=                     4
+ overlap F6=  0.999995802820334     
+ overlap F7=  0.999995512761684     
+ overlap F8=  0.999995366395612     
+ undamped E6= -1.906371559173249E-004
+ undamped E7=  2.714829254507629E-005
+ undamped E8= -1.055884691717641E-004
+ for I=                     1 and J=                     5
+ overlap F6=  0.999998711853718     
+ overlap F7=  0.999998610211173     
+ overlap F8=  0.999998556882375     
+ undamped E6= -1.945699229151550E-004
+ undamped E7=  2.757880213543085E-005
+ undamped E8= -1.064767392130096E-004
+ for I=                     1 and J=                     6
+ overlap F6=  0.999114381571406     
+ overlap F7=  0.999088953670737     
+ overlap F8=  0.999078815397637     
+ undamped E6= -2.267266363008576E-004
+ undamped E7=  3.273021579631504E-005
+ undamped E8= -1.188587884776437E-004
+ for I=                     1 and J=                     7
+ overlap F6=  0.999985413847976     
+ overlap F7=  0.999984552797304     
+ overlap F8=  0.999984137431092     
+ undamped E6= -2.556224400109647E-004
+ undamped E7=  4.047992492884647E-005
+ undamped E8= -1.269631249353117E-004
+ for I=                     1 and J=                     8
+ overlap F6=  0.999922204917740     
+ overlap F7=  0.999918623682909     
+ overlap F8=  0.999917010325064     
+ undamped E6= -2.802007651821871E-004
+ undamped E7=  4.276902002793457E-005
+ undamped E8= -1.359461688204655E-004
+ for I=                     1 and J=                     9
+ overlap F6=  0.999999900042519     
+ overlap F7=  0.999999889977717     
+ overlap F8=  0.999999884288041     
+ undamped E6= -2.822181773124921E-004
+ undamped E7=  4.265234482333029E-005
+ undamped E8= -1.362096889497639E-004
+ for I=                     1 and J=                    10
+ overlap F6=  0.999182119437122     
+ overlap F7=  0.999158203455144     
+ overlap F8=  0.999148624406125     
+ undamped E6= -3.581418119328681E-004
+ undamped E7=  5.580095192853750E-005
+ undamped E8= -1.737896462107374E-004
+ for I=                     1 and J=                    11
+ overlap F6=  0.999833860245326     
+ overlap F7=  0.999827148012725     
+ overlap F8=  0.999824227302721     
+ undamped E6= -3.657653833249075E-004
+ undamped E7=  5.770353858104827E-005
+ undamped E8= -1.754944357089141E-004
+ for I=                     1 and J=                    12
+ overlap F6=  0.999993719197769     
+ overlap F7=  0.999993305823062     
+ overlap F8=  0.999993100149792     
+ undamped E6= -3.689486522408705E-004
+ undamped E7=  5.756265075458665E-005
+ undamped E8= -1.759597245463964E-004
+ for I=                     1 and J=                    13
+ overlap F6=  0.999975589402122     
+ overlap F7=  0.999974247797991     
+ overlap F8=  0.999973613415822     
+ undamped E6= -3.710802700536095E-004
+ undamped E7=  5.746213131526925E-005
+ undamped E8= -1.762466865078791E-004
+ for I=                     1 and J=                    14
+ overlap F6=  0.999973707537307     
+ overlap F7=  0.999972277814529     
+ overlap F8=  0.999971603759241     
+ undamped E6= -3.763009235290515E-004
+ undamped E7=  5.622679310465755E-005
+ undamped E8= -1.774216500863869E-004
+ for I=                     1 and J=                    15
+ overlap F6=  0.999982671927966     
+ overlap F7=  0.999981672735017     
+ overlap F8=  0.999981193894008     
+ undamped E6= -4.012367488028344E-004
+ undamped E7=  5.704863624541826E-005
+ undamped E8= -1.865157110159937E-004
+ for I=                     2 and J=                     1
+ overlap F6=  0.999327247372830     
+ overlap F7=  0.999306692650018     
+ overlap F8=  0.999298368777416     
+ undamped E6= -4.307169508324347E-004
+ undamped E7=  5.398928717426741E-005
+ undamped E8= -1.947476665210505E-004
+ for I=                     2 and J=                     2
+ overlap F6=  0.999995083847715     
+ overlap F7=  0.999994750468026     
+ overlap F8=  0.999994583160659     
+ undamped E6= -4.447585806750291E-004
+ undamped E7=  5.385085119953661E-005
+ undamped E8= -1.987820484683844E-004
+ for I=                     2 and J=                     3
+ overlap F6=  0.999997008653886     
+ overlap F7=  0.999996793589068     
+ overlap F8=  0.999996683808279     
+ undamped E6= -4.462190451836950E-004
+ undamped E7=  5.376542631692237E-005
+ undamped E8= -1.989344523038687E-004
+ for I=                     2 and J=                     4
+ overlap F6=  0.999995621550110     
+ overlap F7=  0.999995320482173     
+ overlap F8=  0.999995168782108     
+ undamped E6= -4.565043369742359E-004
+ undamped E7=  5.361251677518857E-005
+ undamped E8= -2.008186577924537E-004
+ for I=                     2 and J=                     5
+ overlap F6=  0.999991917983908     
+ overlap F7=  0.999991402585618     
+ overlap F8=  0.999991148458470     
+ undamped E6= -4.593890073068770E-004
+ undamped E7=  5.372330626515699E-005
+ undamped E8= -2.013306805334428E-004
+ for I=                     2 and J=                     6
+ overlap F6=  0.999998122344834     
+ overlap F7=  0.999997980097462     
+ overlap F8=  0.999997906360993     
+ undamped E6= -5.142694975746613E-004
+ undamped E7=  5.987040729839872E-005
+ undamped E8= -2.230851150674851E-004
+ for I=                     2 and J=                     7
+ overlap F6=  0.999987095567021     
+ overlap F7=  0.999986321179633     
+ overlap F8=  0.999985945886696     
+ undamped E6= -5.214678602691393E-004
+ undamped E7=  6.042576058855746E-005
+ undamped E8= -2.241664004892185E-004
+ for I=                     2 and J=                     8
+ overlap F6=  0.999962840826013     
+ overlap F7=  0.999960920314683     
+ overlap F8=  0.999960027474615     
+ undamped E6= -5.313245322910971E-004
+ undamped E7=  6.040144233897601E-005
+ undamped E8= -2.264716329209876E-004
+ for I=                     2 and J=                     9
+ overlap F6=  0.999999413506867     
+ overlap F7=  0.999999363339263     
+ overlap F8=  0.999999336371442     
+ undamped E6= -5.327189323041681E-004
+ undamped E7=  6.030828016641281E-005
+ undamped E8= -2.266095278335250E-004
+ for I=                     2 and J=                    10
+ overlap F6=  0.999931309840883     
+ overlap F7=  0.999928083107626     
+ overlap F8=  0.999926621507349     
+ undamped E6= -5.561678230190500E-004
+ undamped E7=  5.973991397927125E-005
+ undamped E8= -2.332304221503151E-004
+ for I=                     2 and J=                    11
+ overlap F6=  0.999983986573339     
+ overlap F7=  0.999983053159970     
+ overlap F8=  0.999982604485564     
+ undamped E6= -5.702886538920868E-004
+ undamped E7=  6.172142273199820E-005
+ undamped E8= -2.365544935824364E-004
+ for I=                     2 and J=                    12
+ overlap F6=  0.999990981621333     
+ overlap F7=  0.999990414492865     
+ overlap F8=  0.999990135971553     
+ undamped E6= -5.788034783260248E-004
+ undamped E7=  6.163624198199896E-005
+ undamped E8= -2.380161662338780E-004
+ for I=                     2 and J=                    13
+ overlap F6=  0.999992145495060     
+ overlap F7=  0.999991642791472     
+ overlap F8=  0.999991394667605     
+ undamped E6= -5.829207636202026E-004
+ undamped E7=  6.148448200411927E-005
+ undamped E8= -2.386048609629867E-004
+ for I=                     2 and J=                    14
+ overlap F6=  0.999984972560463     
+ overlap F7=  0.999984089025800     
+ overlap F8=  0.999983663296033     
+ undamped E6= -5.870253324315266E-004
+ undamped E7=  6.056978655020117E-005
+ undamped E8= -2.393287315855714E-004
+ for I=                     2 and J=                    15
+ overlap F6=  0.999791292059749     
+ overlap F7=  0.999783205740140     
+ overlap F8=  0.999779725521857     
+ undamped E6= -6.181317857907175E-004
+ undamped E7=  6.140497963732085E-005
+ undamped E8= -2.496543164155278E-004
+ for I=                     3 and J=                     1
+ overlap F6=  0.989616887817710     
+ overlap F7=  0.989471359260259     
+ overlap F8=  0.989422420927018     
+ undamped E6= -7.776903696591652E-004
+ undamped E7=  7.617151622328076E-005
+ undamped E8= -3.434724340861829E-004
+ for I=                     3 and J=                     2
+ overlap F6=  0.999938054010991     
+ overlap F7=  0.999935095480508     
+ overlap F8=  0.999933749353122     
+ undamped E6= -8.025520709675693E-004
+ undamped E7=  7.759329950746115E-005
+ undamped E8= -3.536541032069351E-004
+ for I=                     3 and J=                     3
+ overlap F6=  0.999976228974482     
+ overlap F7=  0.999974917565637     
+ overlap F8=  0.999974296809050     
+ undamped E6= -8.046918674249171E-004
+ undamped E7=  7.748368067745843E-005
+ undamped E8= -3.539580577362154E-004
+ for I=                     3 and J=                     4
+ overlap F6=  0.999996206672644     
+ overlap F7=  0.999995941372165     
+ overlap F8=  0.999995807033826     
+ undamped E6= -8.122219768997847E-004
+ undamped E7=  7.718111887809668E-005
+ undamped E8= -3.554561842279954E-004
+ for I=                     3 and J=                     5
+ overlap F6=  0.999977276146061     
+ overlap F7=  0.999976014460772     
+ overlap F8=  0.999975416177630     
+ undamped E6= -8.174999271826689E-004
+ undamped E7=  7.751692148278783E-005
+ undamped E8= -3.567994748689408E-004
+ for I=                     3 and J=                     6
+ overlap F6=  0.999888423689381     
+ overlap F7=  0.999883588629021     
+ overlap F8=  0.999881445360863     
+ undamped E6= -9.011301905532251E-004
+ undamped E7=  8.591743360320834E-005
+ undamped E8= -4.020904101653243E-004
+ for I=                     3 and J=                     7
+ overlap F6=  0.999976545554326     
+ overlap F7=  0.999975249140036     
+ overlap F8=  0.999974635155769     
+ undamped E6= -9.258907358946702E-004
+ undamped E7=  9.137894508535990E-005
+ undamped E8= -4.089275456179819E-004
+ for I=                     3 and J=                     8
+ overlap F6=  0.999943656325913     
+ overlap F7=  0.999940924659128     
+ overlap F8=  0.999939676686790     
+ undamped E6= -9.552191625720638E-004
+ undamped E7=  9.378652411592700E-005
+ undamped E8= -4.206018589162209E-004
+ for I=                     3 and J=                     9
+ overlap F6=  0.999986788255631     
+ overlap F7=  0.999985997910685     
+ overlap F8=  0.999985615223198     
+ undamped E6= -9.576423563036691E-004
+ undamped E7=  9.365794677771909E-005
+ undamped E8= -4.209484991394192E-004
+ for I=                     3 and J=                    10
+ overlap F6=  0.999971478881062     
+ overlap F7=  0.999969946118844     
+ overlap F8=  0.999969225835391     
+ undamped E6= -1.042896767789957E-003
+ undamped E7=  1.081263709759068E-004
+ undamped E8= -4.650339637778122E-004
+ for I=                     3 and J=                    11
+ overlap F6=  0.999900909509732     
+ overlap F7=  0.999896527901380     
+ overlap F8=  0.999894575150344     
+ undamped E6= -1.059262157404024E-003
+ undamped E7=  1.107370740400624E-004
+ undamped E8= -4.698621243522186E-004
+ for I=                     3 and J=                    12
+ overlap F6=  0.999997757239591     
+ overlap F7=  0.999997590646180     
+ overlap F8=  0.999997504789733     
+ undamped E6= -1.066444146784909E-003
+ undamped E7=  1.104441164096201E-004
+ undamped E8= -4.712658994553648E-004
+ for I=                     3 and J=                    13
+ overlap F6=  0.999962321903255     
+ overlap F7=  0.999960378618377     
+ overlap F8=  0.999959475706571     
+ undamped E6= -1.070388348099326E-003
+ undamped E7=  1.102739510375522E-004
+ undamped E8= -4.719315622035735E-004
+ for I=                     3 and J=                    14
+ overlap F6=  0.999989059717254     
+ overlap F7=  0.999988388730751     
+ overlap F8=  0.999988061538375     
+ undamped E6= -1.077531253264193E-003
+ undamped E7=  1.091189069294114E-004
+ undamped E8= -4.737224531964440E-004
+ for I=                     3 and J=                    15
+ overlap F6=  0.999992006473544     
+ overlap F7=  0.999991496006723     
+ overlap F8=  0.999991244210832     
+ undamped E6= -1.130727234826137E-003
+ undamped E7=  1.165909049905812E-004
+ undamped E8= -4.987941036980164E-004
+ for I=                     4 and J=                     1
+ overlap F6=  0.998799121106932     
+ overlap F7=  0.998767041498157     
+ overlap F8=  0.998754477946723     
+ undamped E6= -1.155733472965573E-003
+ undamped E7=  1.139996706358326E-004
+ undamped E8= -5.053523975996151E-004
+ for I=                     4 and J=                     2
+ overlap F6=  0.999885648559812     
+ overlap F7=  0.999880714108495     
+ overlap F8=  0.999878529237145     
+ undamped E6= -1.164663346241928E-003
+ undamped E7=  1.135062814413622E-004
+ undamped E8= -5.075436058880659E-004
+ for I=                     4 and J=                     3
+ overlap F6=  0.999993232932119     
+ overlap F7=  0.999992791653782     
+ overlap F8=  0.999992572679308     
+ undamped E6= -1.165821072762713E-003
+ undamped E7=  1.134131321568863E-004
+ undamped E8= -5.076545363540781E-004
+ for I=                     4 and J=                     4
+ overlap F6=  0.999987684702195     
+ overlap F7=  0.999986941066914     
+ overlap F8=  0.999986580045126     
+ undamped E6= -1.171299165672143E-003
+ undamped E7=  1.131312813016224E-004
+ undamped E8= -5.084613663854029E-004
+ for I=                     4 and J=                     5
+ overlap F6=  0.999992250847365     
+ overlap F7=  0.999991754039784     
+ overlap F8=  0.999991508706480     
+ undamped E6= -1.173532141630346E-003
+ undamped E7=  1.131424867336730E-004
+ undamped E8= -5.088229159525559E-004
+ for I=                     4 and J=                     6
+ overlap F6=  0.998575271929887     
+ overlap F7=  0.998538782711114     
+ overlap F8=  0.998524639498342     
+ undamped E6= -1.202676884752651E-003
+ undamped E7=  1.136699949424004E-004
+ undamped E8= -5.181104220209922E-004
+ for I=                     4 and J=                     7
+ overlap F6=  0.999987876908566     
+ overlap F7=  0.999987143353216     
+ overlap F8=  0.999986787015376     
+ undamped E6= -1.209256817804290E-003
+ undamped E7=  1.142111575687953E-004
+ undamped E8= -5.190611699670886E-004
+ for I=                     4 and J=                     8
+ overlap F6=  0.999978274824579     
+ overlap F7=  0.999977060903182     
+ overlap F8=  0.999976484250972     
+ undamped E6= -1.216914768825373E-003
+ undamped E7=  1.139841549014110E-004
+ undamped E8= -5.206960179884530E-004
+ for I=                     4 and J=                     9
+ overlap F6=  0.999990054463038     
+ overlap F7=  0.999989436868252     
+ overlap F8=  0.999989134648722     
+ undamped E6= -1.218095382359434E-003
+ undamped E7=  1.138568931110804E-004
+ undamped E8= -5.208055759136930E-004
+ for I=                     4 and J=                    10
+ overlap F6=  0.999985040064922     
+ overlap F7=  0.999984159963095     
+ overlap F8=  0.999983735814777     
+ undamped E6= -1.239332404653344E-003
+ undamped E7=  1.140752142345790E-004
+ undamped E8= -5.265628313048427E-004
+ for I=                     4 and J=                    11
+ overlap F6=  0.999978502859207     
+ overlap F7=  0.999977299892669     
+ overlap F8=  0.999976728207734     
+ undamped E6= -1.248007132124199E-003
+ undamped E7=  1.151211815691145E-004
+ undamped E8= -5.282856551957480E-004
+ for I=                     4 and J=                    12
+ overlap F6=  0.999972774207839     
+ overlap F7=  0.999971301166025     
+ overlap F8=  0.999970607655077     
+ undamped E6= -1.254148756436076E-003
+ undamped E7=  1.149818936995892E-004
+ undamped E8= -5.292234324853751E-004
+ for I=                     4 and J=                    13
+ overlap F6=  0.999992464132099     
+ overlap F7=  0.999991979295752     
+ overlap F8=  0.999991739633091     
+ undamped E6= -1.256919281114887E-003
+ undamped E7=  1.146987500019292E-004
+ undamped E8= -5.295678866462075E-004
+ for I=                     4 and J=                    14
+ overlap F6=  0.999999410595805     
+ overlap F7=  0.999999360203929     
+ overlap F8=  0.999999333119579     
+ undamped E6= -1.260392265723685E-003
+ undamped E7=  1.137571669386524E-004
+ undamped E8= -5.301430633450666E-004
+ for I=                     4 and J=                    15
+ overlap F6=  0.999968217432459     
+ overlap F7=  0.999966536230493     
+ overlap F8=  0.999965749638003     
+ undamped E6= -1.282275348982568E-003
+ undamped E7=  1.142760010973329E-004
+ undamped E8= -5.365552676299560E-004
+ for I=                     5 and J=                     1
+ overlap F6=  0.999933242554713     
+ overlap F7=  0.999930092165385     
+ overlap F8=  0.999928663374382     
+ undamped E6= -1.348331978198455E-003
+ undamped E7=  1.046423306120968E-004
+ undamped E8= -5.606499792274823E-004
+ for I=                     5 and J=                     2
+ overlap F6=  0.998244012568417     
+ overlap F7=  0.998201370959321     
+ overlap F8=  0.998185056618466     
+ undamped E6= -1.389628174299443E-003
+ undamped E7=  1.043005001658927E-004
+ undamped E8= -5.776111821628784E-004
+ for I=                     5 and J=                     3
+ overlap F6=  0.999988116557412     
+ overlap F7=  0.999987395603359     
+ overlap F8=  0.999987045125463     
+ undamped E6= -1.392775035958649E-003
+ undamped E7=  1.041862175736476E-004
+ undamped E8= -5.780346153559040E-004
+ for I=                     5 and J=                     4
+ overlap F6=  0.999947583764715     
+ overlap F7=  0.999945013559371     
+ overlap F8=  0.999943835732234     
+ undamped E6= -1.417566009099020E-003
+ undamped E7=  1.061114308238361E-004
+ undamped E8= -5.841079736168165E-004
+ for I=                     5 and J=                     5
+ overlap F6=  0.999524151644663     
+ overlap F7=  0.999508487003561     
+ overlap F8=  0.999502022542068     
+ undamped E6= -1.424116554801757E-003
+ undamped E7=  1.062826148945454E-004
+ undamped E8= -5.856332005099333E-004
+ for I=                     5 and J=                     6
+ overlap F6=  0.982822411277157     
+ overlap F7=  0.982624994287898     
+ overlap F8=  0.982561497914873     
+ undamped E6= -1.653901264243502E-003
+ undamped E7=  1.393428002944501E-004
+ undamped E8= -7.321361247292833E-004
+ for I=                     5 and J=                     7
+ overlap F6=  0.999927293975682     
+ overlap F7=  0.999923909866865     
+ overlap F8=  0.999922380778453     
+ undamped E6= -1.667747006647740E-003
+ undamped E7=  1.400452839043237E-004
+ undamped E8= -7.347188518300251E-004
+ for I=                     5 and J=                     8
+ overlap F6=  0.999873516611071     
+ overlap F7=  0.999868153122508     
+ overlap F8=  0.999865789269835     
+ undamped E6= -1.690905359600764E-003
+ undamped E7=  1.395303911274102E-004
+ undamped E8= -7.419062991867325E-004
+ for I=                     5 and J=                     9
+ overlap F6=  0.999926229196288     
+ overlap F7=  0.999922803634833     
+ overlap F8=  0.999921256801772     
+ undamped E6= -1.693697911117945E-003
+ undamped E7=  1.393578160279158E-004
+ undamped E8= -7.422537922364210E-004
+ for I=                     5 and J=                    10
+ overlap F6=  0.999991196825961     
+ overlap F7=  0.999990641515822     
+ overlap F8=  0.999990368558171     
+ undamped E6= -1.751227230066438E-003
+ undamped E7=  1.401821012366626E-004
+ undamped E8= -7.640927942992176E-004
+ for I=                     5 and J=                    11
+ overlap F6=  0.999116445961617     
+ overlap F7=  0.999091063651913     
+ overlap F8=  0.999080942195811     
+ undamped E6= -1.796943595833661E-003
+ undamped E7=  1.495193852843636E-004
+ undamped E8= -7.799773223303352E-004
+ for I=                     5 and J=                    12
+ overlap F6=  0.999930411445369     
+ overlap F7=  0.999927149360367     
+ overlap F8=  0.999925672583197     
+ undamped E6= -1.824857489330174E-003
+ undamped E7=  1.511677222870642E-004
+ undamped E8= -7.870769920123046E-004
+ for I=                     5 and J=                    13
+ overlap F6=  0.999669331695161     
+ overlap F7=  0.999657606223329     
+ overlap F8=  0.999652674399626     
+ undamped E6= -1.835054740583631E-003
+ undamped E7=  1.511161236031468E-004
+ undamped E8= -7.890446934800360E-004
+ for I=                     5 and J=                    14
+ overlap F6=  0.999961333993311     
+ overlap F7=  0.999959347500039     
+ overlap F8=  0.999958425496867     
+ undamped E6= -1.844556454043341E-003
+ undamped E7=  1.495004309793598E-004
+ undamped E8= -7.912542312403573E-004
+ for I=                     5 and J=                    15
+ overlap F6=  0.998397635862048     
+ overlap F7=  0.998357797436100     
+ overlap F8=  0.998342467814248     
+ undamped E6= -1.961736501604363E-003
+ undamped E7=  1.745787662442673E-004
+ undamped E8= -8.515845725565872E-004
+ for I=                     6 and J=                     1
+ overlap F6=  0.928627164165921     
+ overlap F7=  0.928234768300938     
+ overlap F8=  0.928126969324780     
+ undamped E6= -2.575391780345761E-003
+ undamped E7=  4.149307800502951E-004
+ undamped E8= -1.505864275171354E-003
+ for I=                     6 and J=                     2
+ overlap F6=  0.999968979761140     
+ overlap F7=  0.999967333019046     
+ overlap F8=  0.999966561790985     
+ undamped E6= -2.617758332746829E-003
+ undamped E7=  4.249814023754902E-004
+ undamped E8= -1.529327318649283E-003
+ for I=                     6 and J=                     3
+ overlap F6=  0.999628291502192     
+ overlap F7=  0.999615416418154     
+ overlap F8=  0.999610033619846     
+ undamped E6= -2.620889271018804E-003
+ undamped E7=  4.251443652592690E-004
+ undamped E8= -1.529910927674650E-003
+ for I=                     6 and J=                     4
+ overlap F6=  0.999958394841238     
+ overlap F7=  0.999956280894910     
+ overlap F8=  0.999955302709328     
+ undamped E6= -2.628936284892220E-003
+ undamped E7=  4.251612767543384E-004
+ undamped E8= -1.531817209131039E-003
+ for I=                     6 and J=                     5
+ overlap F6=  0.998968440631943     
+ overlap F7=  0.998939860878833     
+ overlap F8=  0.998928566609290     
+ undamped E6= -2.637962100064984E-003
+ undamped E7=  4.281476590985229E-004
+ undamped E8= -1.534907693043085E-003
+ for I=                     6 and J=                     6
+ overlap F6=  0.991832584009006     
+ overlap F7=  0.991707750442390     
+ overlap F8=  0.991664933863816     
+ undamped E6= -2.758767120628385E-003
+ undamped E7=  4.691043745109685E-004
+ undamped E8= -1.619364496898141E-003
+ for I=                     6 and J=                     7
+ overlap F6=  0.997045029289293     
+ overlap F7=  0.996982740787128     
+ overlap F8=  0.996959708731919     
+ undamped E6= -2.822419937695097E-003
+ undamped E7=  4.947152827052955E-004
+ undamped E8= -1.647756051457402E-003
+ for I=                     6 and J=                     8
+ overlap F6=  0.999489358310541     
+ overlap F7=  0.999472796638892     
+ overlap F8=  0.999465987804413     
+ undamped E6= -2.893866329559355E-003
+ undamped E7=  5.160296265900290E-004
+ undamped E8= -1.691352549619409E-003
+ for I=                     6 and J=                     9
+ overlap F6=  0.999973259460148     
+ overlap F7=  0.999971808909738     
+ overlap F8=  0.999971125496416     
+ undamped E6= -2.897768875167232E-003
+ undamped E7=  5.161373278370217E-004
+ undamped E8= -1.692112616198469E-003
+ for I=                     6 and J=                    10
+ overlap F6=  0.999646998359178     
+ overlap F7=  0.999634643345426     
+ overlap F8=  0.999629464158743     
+ undamped E6= -3.114357528588194E-003
+ undamped E7=  5.854992237879613E-004
+ undamped E8= -1.867747222611076E-003
+ for I=                     6 and J=                    11
+ overlap F6=  0.999202070140399     
+ overlap F7=  0.999178605974115     
+ overlap F8=  0.999169194665558     
+ undamped E6= -3.135071011008623E-003
+ undamped E7=  5.930469827013842E-004
+ undamped E8= -1.875353258320975E-003
+ for I=                     6 and J=                    12
+ overlap F6=  0.999984494914302     
+ overlap F7=  0.999983587156144     
+ overlap F8=  0.999983150275568     
+ undamped E6= -3.142115498962483E-003
+ undamped E7=  5.932351692061406E-004
+ undamped E8= -1.876947139000419E-003
+ for I=                     6 and J=                    13
+ overlap F6=  0.999643612487828     
+ overlap F7=  0.999631162866317     
+ overlap F8=  0.999625946591139     
+ undamped E6= -3.146676884027599E-003
+ undamped E7=  5.935229430882911E-004
+ undamped E8= -1.877880460754270E-003
+ for I=                     6 and J=                    14
+ overlap F6=  0.999714321241943     
+ overlap F7=  0.999703895311473     
+ overlap F8=  0.999699477389045     
+ undamped E6= -3.157851140079988E-003
+ undamped E7=  5.920141966335997E-004
+ undamped E8= -1.881578238338644E-003
+ for I=                     6 and J=                    15
+ overlap F6=  0.999999861463169     
+ overlap F7=  0.999999847903896     
+ overlap F8=  0.999999840306581     
+ undamped E6= -3.236142643849837E-003
+ undamped E7=  6.061497994475254E-004
+ undamped E8= -1.929622859655682E-003
+ for I=                     7 and J=                     1
+ overlap F6=  0.963868682639190     
+ overlap F7=  0.963574682747994     
+ overlap F8=  0.963486975259365     
+ undamped E6= -3.671020308016260E-003
+ undamped E7=  6.611397624003626E-004
+ undamped E8= -2.341229742544265E-003
+ for I=                     7 and J=                     2
+ overlap F6=  0.999858494526051     
+ overlap F7=  0.999852611122862     
+ overlap F8=  0.999850031620869     
+ undamped E6= -3.698231570131473E-003
+ undamped E7=  6.628305891434351E-004
+ undamped E8= -2.354191214803648E-003
+ for I=                     7 and J=                     3
+ overlap F6=  0.999817769425943     
+ overlap F7=  0.999810529834130     
+ overlap F8=  0.999807393532138     
+ undamped E6= -3.700729135845847E-003
+ undamped E7=  6.627435374783868E-004
+ undamped E8= -2.354621163792921E-003
+ for I=                     7 and J=                     4
+ overlap F6=  0.999991500952712     
+ overlap F7=  0.999990962415101     
+ overlap F8=  0.999990697362863     
+ undamped E6= -3.706184647131623E-003
+ undamped E7=  6.624708614976322E-004
+ undamped E8= -2.355752704021207E-003
+ for I=                     7 and J=                     5
+ overlap F6=  0.999293801136936     
+ overlap F7=  0.999272455742454     
+ overlap F8=  0.999263835061334     
+ undamped E6= -3.713049666841565E-003
+ undamped E7=  6.628751444222427E-004
+ undamped E8= -2.357891093374944E-003
+ for I=                     7 and J=                     6
+ overlap F6=  0.999730615256873     
+ overlap F7=  0.999720671368030     
+ overlap F8=  0.999716445262714     
+ undamped E6= -3.782626929043311E-003
+ undamped E7=  6.734439024348658E-004
+ undamped E8= -2.398217735761041E-003
+ for I=                     7 and J=                     7
+ overlap F6=  0.998527312810005     
+ overlap F7=  0.998489907177127     
+ overlap F8=  0.998475438232148     
+ undamped E6= -3.836214274779657E-003
+ undamped E7=  6.880775212847700E-004
+ undamped E8= -2.420679328613586E-003
+ for I=                     7 and J=                     8
+ overlap F6=  0.997512718893680     
+ overlap F7=  0.997457691641267     
+ overlap F8=  0.997437107578580     
+ undamped E6= -3.886657404137059E-003
+ undamped E7=  6.907457155450395E-004
+ undamped E8= -2.447981459035124E-003
+ for I=                     7 and J=                     9
+ overlap F6=  0.999930733076847     
+ overlap F7=  0.999927483638231     
+ overlap F8=  0.999926012289160     
+ undamped E6= -3.889889440162887E-003
+ undamped E7=  6.906921526455037E-004
+ undamped E8= -2.448570094317764E-003
+ for I=                     7 and J=                    10
+ overlap F6=  0.996199231360987     
+ overlap F7=  0.996124794888524     
+ overlap F8=  0.996097747613075     
+ undamped E6= -4.065107415852205E-003
+ undamped E7=  7.494282143526594E-004
+ undamped E8= -2.580672856863824E-003
+ for I=                     7 and J=                    11
+ overlap F6=  0.999939307431413     
+ overlap F7=  0.999936399322399     
+ overlap F8=  0.999935074971124     
+ undamped E6= -4.079183078645443E-003
+ undamped E7=  7.514250499565466E-004
+ undamped E8= -2.585200792619543E-003
+ for I=                     7 and J=                    12
+ overlap F6=  0.999987222996678     
+ overlap F7=  0.999986455242870     
+ overlap F8=  0.999986083026026     
+ undamped E6= -4.084710147541123E-003
+ undamped E7=  7.513629333812731E-004
+ undamped E8= -2.586350334247542E-003
+ for I=                     7 and J=                    13
+ overlap F6=  0.999951850028504     
+ overlap F7=  0.999949457683142     
+ overlap F8=  0.999948357419957     
+ undamped E6= -4.088118737071807E-003
+ undamped E7=  7.513588639867858E-004
+ undamped E8= -2.586981069751378E-003
+ for I=                     7 and J=                    14
+ overlap F6=  0.999914400515620     
+ overlap F7=  0.999910521610872     
+ overlap F8=  0.999908781530852     
+ undamped E6= -4.097269723058677E-003
+ undamped E7=  7.504035363590204E-004
+ undamped E8= -2.589808566090271E-003
+ for I=                     7 and J=                    15
+ overlap F6=  0.999933170021950     
+ overlap F7=  0.999930016760213     
+ overlap F8=  0.999928586733924     
+ undamped E6= -4.151842005446505E-003
+ undamped E7=  7.546989730356480E-004
+ undamped E8= -2.619439726669635E-003
+
+                 --------------------------------------
+                 FRAGMENT-FRAGMENT INTERACTION ENERGIES
+                 --------------------------------------
+
+                 CHARGE-CHARGE         =  -0.0151394755
+                 CHARGE-DIPOLE         =  -0.0062835209
+                 CHARGE-QUADRUPOLE     =  -0.0010996598
+                 CHARGE-OCTUPOLE       =  -0.0001167586
+                 DIPOLE-DIPOLE         =   0.0007999488
+                 DIPOLE-QUADRUPOLE     =   0.0002345555
+                 QUADRUPOLE-QUADRUPOLE =   0.0004129522
+                 OVERLAP PEN. ENERGY   =  -0.0015090343
+                                         --------------
+                 ELECTROSTATIC ENERGY  =  -0.0227009925
+                 REPULSION ENERGY      =   0.0149600055
+                 POLARIZATION ENERGY   =  -0.0068511890
+                 TOTAL DISPERSION ENERGY(E6+E7+E8) =  -0.0059012586
+                 E7 DISPERSION ENERGY     =   0.0007338384
+                 E6 DISPERSION ENERGY     =  -0.0040833765
+                 E8 DISPERSION ENERGY     =  -0.0025517204
+                 CHARGE TRANSFER ENRGY =  -0.0016559620
+                 --------------------------------------
+                 FINAL EFP ENERGY      =  -0.0221493966
+ 
+
+          ----------------------------------------
+          EFFECTIVE FRAGMENT ELECTROSTATIC MOMENTS
+          ----------------------------------------
+
+ FRAGMENT   1  MONOA 
+          X           Y           Z (BOHR)    CHARGE
+     3.546067    1.094879    3.763550        0.00 (A.U.)
+         DX          DY          DZ         /D/  (DEBYE)
+     1.163338    0.988672    2.475382    2.908323
+
+ FRAGMENT   2  MONOB 
+          X           Y           Z (BOHR)    CHARGE
+    -1.533203   -0.473390   -1.627235        1.00 (A.U.)
+         DX          DY          DZ         /D/  (DEBYE)
+    -2.241732   -0.707789   -4.583357    5.151066
+
+          ----------------------------
+          SYSTEM ELECTROSTATIC MOMENTS
+          ----------------------------
+
+ CENTER              X           Y           Z (BOHR)    CHARGE
+               -0.000000    0.000000    0.000000        1.00 (A.U.)
+         DX          DY          DZ         /D/  (DEBYE)
+    -1.078394    0.280883   -2.107975    2.384405
+ 
+
+   1 warning(s) detected.
+     A line starting with $, which begins with "$END                ".
+ There may be a problem in your input file.
+
+                306850  WORDS OF DYNAMIC MEMORY USED
+ EXECUTION OF GAMESS TERMINATED NORMALLY 13:51:35 16-JUL-2025    
+ DDI: 263640 bytes (0.3 MB / 0 MWords) used by master data server.
+
+ ----------------------------------------
+ CPU timing information for all processes
+ ========================================
+ 0: 0.754 + 0.124 = 0.879
+ 1: 0.519 + 0.359 = 0.878
+ ----------------------------------------
+unset echo
+----- accounting info -----
+Files used on the parent node nova18-wide-66 were:
+-rw-rw-r--. 1 mavery domain users 970358 Jul 16 13:51 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F05
+-rw-rw-r--. 1 mavery domain users      0 Jul 16 13:51 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F08
+-rw-rw-r--. 1 mavery domain users 261760 Jul 16 13:51 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F10
+-rw-rw-r--. 1 mavery domain users      0 Jul 16 13:51 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.F25
+-rw-rw-r--. 1 mavery domain users     15 Jul 16 13:51 /tmp/6757869/SSI-136SER-144ARG-1-unCP-COHHHH-CCNNNHHHHHHHH-Disp8-EFP.nodes.mpd
+export TMOUT=5400
+export TMPDIR=/tmp
+export PTMPDIR=/tmp/ptmp
+Wed Jul 16 01:51:35 PM CDT 2025
+0.592u 0.282s 0:03.00 29.0%	0+0k 1896+4216io 0pf+0w

@@ -1,0 +1,18 @@
+Random Seed for split replicability: 43
+Run for approx 1.5hs
+Allowed expressions and settings:
+
+model = PySRRegressor(
+        niterations = n_iter,
+        binary_operators=["+", "*", "-", "^", "/"],
+        unary_operators=["log", "exp", "sqrt", "cbrt"],
+        elementwise_loss="loss(x, y) = (x - y)^2",
+        maxsize=30,
+        model_selection="best",
+        verbosity=1,
+        complexity_of_variables=2,
+        constraints={"/": (-1, 1)}, # -1: Arbitrary complexity; 1: Only constants
+    )
+
+For division, only division by constants allowed (to avoid discontinuities)
+Cbrt and Sqrt introduce non-differentiable points at 0, but the functions are continuous.
